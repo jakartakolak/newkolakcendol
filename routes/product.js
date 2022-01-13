@@ -1,5 +1,6 @@
 const Controller = require('../../controller/productController')
 const router = require('express').Router()
+const authenticate = require("../../middleware/auth")
 
 router.post('/kolak/up', Controller.upKolak)
 router.post('/kolak/down', Controller.downKolak)

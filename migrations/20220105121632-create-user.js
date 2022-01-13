@@ -19,7 +19,11 @@ module.exports = {
       },
       phonenumber: {
         type: Sequelize.STRING
+      },
+      photo:{
+        type: Sequelize.STRING
       }
+
     });
   },
   down: async (queryInterface, Sequelize) => {

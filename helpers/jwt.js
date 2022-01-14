@@ -1,10 +1,10 @@
 const jwt = require('jsonwebtoken');
-
+const secret = "laruku"
 module.exports = {
   sign: function(user) {
-    return jwt.sign(user, process.env.JWT_SECRET);
+    return jwt.sign(user, secret);
   },
   verify: function(token) {
-    return jwt.verify(token, process.env.JWT_SECRET);
+    return jwt.verify(token, secret);
   }
 }

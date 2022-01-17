@@ -1,19 +1,13 @@
 const jwt = require("../helpers/jwt")
+const { User } = require("../models/user")
 module.exports = {
   authenticate(req, res, next) {
     if (req.headers.authorization) {
       let decoded = jwt.verify(req.headers.authorization);
-      User.findOne({
-        where: {
-          username: decoded.username
-        }
-      })
-      .then(user => {
-        console.log(user);
-        next()
-      })
+      req.user = decoded
+      next()
     } else {
-      throw err;
+      res.status(404).send("Unauthorized");
     }
   }
 }

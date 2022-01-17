@@ -3,7 +3,8 @@ const {Product,User} = require('../models')
 
 class Controller {
     static upKolak(req,res){
-        res.send("masok")
+        // console.log("masuk");
+        Product.increment('count')
     }
     static downKolak(req,res){
         Product

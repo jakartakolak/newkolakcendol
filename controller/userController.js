@@ -48,9 +48,6 @@ class Controller {
                         username: data.username,
                         email: data.email,
                         phonenumber: data.phonenumber,
-                        cendolCount: 0,
-                        kolakCount: 0,
-                        rujakCount: 0,
                     };
                     let token = jwt.sign(signUser);
                     res.status(200).json({

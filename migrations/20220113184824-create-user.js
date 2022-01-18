@@ -19,6 +19,12 @@ module.exports = {
       },
       phonenumber: {
         type: Sequelize.STRING
+      },kolakCount: {
+        type: Sequelize.INTEGER
+      },rujakCount:{
+        type:Sequelize.INTEGER
+      },cendolCount:{
+        type:Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

@@ -18,7 +18,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       phonenumber: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+      },kolakCount: {
+        type: Sequelize.INTEGER
+      },rujakCount:{
+        type:Sequelize.INTEGER
+      },cendolCount:{
+        type:Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

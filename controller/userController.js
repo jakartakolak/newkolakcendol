@@ -13,12 +13,15 @@ class Controller {
             },
             defaults: {
                 password: newUser.password,
-                phonenumber: newUser.phonenumber
+                phonenumber: newUser.phonenumber,
+                kolakCount : 0,
+                rujakCount:0,
+                cendolCount:0,
             }
         })
             .then(response => {
                 if (response[1]) {
-                    res.status(400).json({ "Status": "Created", "Message": "New User Registered" })
+                    res.status(202).json({ "Status": "Created", "Message": "New User Registered" })
                 } else {
                     res.status(400).json({ "Status": "Failed", "Message": "Username or Email Has Been taken" })
                 }
@@ -48,10 +51,13 @@ class Controller {
                         username: data.username,
                         email: data.email,
                         phonenumber: data.phonenumber,
+                        kolakCount:data.kolakCount,
+                        rujakCount:data.rujakCount,
+                        cendolCount:data.cendolCount
                     };
                     let token = jwt.sign(signUser);
                     res.status(200).json({
-                        "token":token,
+                        "Authorization":token,
                     })
                 }
             })

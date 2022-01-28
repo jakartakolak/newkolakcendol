@@ -19,11 +19,14 @@ module.exports = {
       },
       phonenumber: {
         type: Sequelize.STRING,
-      },kolakCount: {
+      },
+      kolakCount: {
         type: Sequelize.INTEGER
-      },rujakCount:{
+      },
+      rujakCount:{
         type:Sequelize.INTEGER
-      },cendolCount:{
+      },
+      cendolCount:{
         type:Sequelize.INTEGER
       },
       createdAt: {

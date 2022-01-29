@@ -3,7 +3,7 @@
     "username": "haljeqhtughvtq",
     "password": "15055798d808ea53e7223484a60b1a2a59dbecd50606230aab593aad86e17d4b",
     "database": "d3tu2dj7ga1rka",
-    "host": "postgres://haljeqhtughvtq:15055798d808ea53e7223484a60b1a2a59dbecd50606230aab593aad86e17d4b@ec2-18-234-17-166.compute-1.amazonaws.com:5432/d3tu2dj7ga1rka",
+    "host": "ec2-18-234-17-166.compute-1.amazonaws.com",
     "dialect": "postgres"
   },
   "test": {
@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "haljeqhtughvtq",
-    "password": "15055798d808ea53e7223484a60b1a2a59dbecd50606230aab593aad86e17d4b",
-    "database": "d3tu2dj7ga1rka",
-    "host": "ec2-18-234-17-166.compute-1.amazonaws.com",
+    "username": "mqgmdbjllxdlsp",
+    "password": "02fba58bd2027aa400cb8c656f54f7e7b07cff15a03cea527c379b067891eeda",
+    "database": "d6vbrahpb2pe70",
+    "host": "ec2-34-205-209-14.compute-1.amazonaws.com",
     "dialect": "postgres"
   }
 }

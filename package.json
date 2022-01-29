@@ -22,7 +22,9 @@
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
     "postgres": "^1.0.2",
-    "sequelize": "^6.12.5",
+    "sequelize": "^6.12.5"
+  },
+  "devDependencies": {
     "sequelize-cli": "^6.3.0"
   }
 }

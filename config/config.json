@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "postgres",
-    "database": "kolak",
-    "host": "127.0.0.1",
+    "username": "haljeqhtughvtq",
+    "password": "15055798d808ea53e7223484a60b1a2a59dbecd50606230aab593aad86e17d4b",
+    "database": "d3tu2dj7ga1rka",
+    "host": "postgres://haljeqhtughvtq:15055798d808ea53e7223484a60b1a2a59dbecd50606230aab593aad86e17d4b@ec2-18-234-17-166.compute-1.amazonaws.com:5432/d3tu2dj7ga1rka",
     "dialect": "postgres"
   },
   "test": {

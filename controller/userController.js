@@ -68,6 +68,13 @@ class Controller {
                 {"status":"failed","message":"Wrong Username or Password"}
             ))
     }
+
+    static help(req,res){
+        res.status(200).json({
+            "status":"success",
+            "message":"Selamat datang di aplikasi cendol kolak rujak. Anda bisa melihat jumlah cemilan anda disini"
+          })
+    }
 }
 
 module.exports = Controller

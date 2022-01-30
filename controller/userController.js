@@ -20,8 +20,9 @@ class Controller {
             }
         })
             .then(response => {
+                console.log(response);
                 if (response[1]) {
-                    res.status(202).json({ "Status": "Created", "Message": "New User Registered" })
+                    res.status(201).json({ "Status": "Created", "Message": "New User Registered" })
                 } else {
                     res.status(400).json({ "Status": "Failed", "Message": "Username or Email Has Been taken" })
                 }
@@ -42,7 +43,8 @@ class Controller {
         const { username, password } = userLogin
         User.findOne({
             where: {
-                username: userLogin.username
+                username: userLogin.username,
+                password:userLogin.password
             }
         })
             .then(data => {
@@ -57,11 +59,14 @@ class Controller {
                     };
                     let token = jwt.sign(signUser);
                     res.status(200).json({
+                        "status":"success",
                         "Authorization":token,
                     })
                 }
             })
-            .catch(err => res.send(err))
+            .catch(err => res.status(401).json(
+                {"status":"failed","message":"Wrong Username or Password"}
+            ))
     }
 }
 

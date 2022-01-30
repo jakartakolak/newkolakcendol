@@ -6,7 +6,7 @@ module.exports = {
       req.user = decoded
       next()
     } else {
-      res.status(401).send("Unauthorized Please Login / Signup");
+      res.status(401).json({"status":"failed","message":"please login/sign-up"});
     }
   }
 }

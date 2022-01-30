@@ -7,7 +7,7 @@ const userRoutes = require("./routes/user")
 
 app.use(express.json());
 
-app.use(timeout('5s'))
+app.use(timeout('10s'))
 app.use('/',userRoutes)
 app.use('/me',productRoutes)
 

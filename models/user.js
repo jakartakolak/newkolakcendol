@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     // console.log(instance);
     const hash = crypt.hashPassword(instance.password)
     instance.password = hash
-  }); 
+  });
   
   return User;
 };

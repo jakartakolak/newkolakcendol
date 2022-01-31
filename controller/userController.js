@@ -20,11 +20,12 @@ class Controller {
             }
         })
             .then(response => {
-                console.log(response);
+                let username = response[0].dataValues.username
+                let email = response[0].dataValues.email
                 if (response[1]) {
                     res.status(201).json({ "Status": "Created", "Message": "New User Registered" })
                 } else {
-                    res.status(400).json({ "Status": "Failed", "Message": "Username or Email Has Been taken" })
+                    res.status(400).json({"Status":"Failed","message":"Username or Email has been taken"})
                 }
             })
             .then((user, created) => {

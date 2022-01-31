@@ -1,16 +1,10 @@
 {
   "development": {
-    "username": "qplmtrmqzipztn",
-    "password": "154a39f6e7e8fa0767cfbbf366b2ce0193e2991942f120880eb11fc4b7e35e54",
-    "database": "d7gc4k6ro7tq8v",
-    "host": "ec2-34-230-133-163.compute-1.amazonaws.com",
-    "dialect": "postgres",
-    "dialectOptions": {
-      "ssl": {
-          "require": true,
-          "rejectUnauthorized": false
-      }
-    }
+    "username": "postgres",
+    "password": "postgres",
+    "database": "kolak",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
   },
   "test": {
     "username": "root",

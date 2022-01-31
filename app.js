@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const timeout = require('connect-timeout');
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 const productRoutes = require('./routes/product')
 const userRoutes = require("./routes/user")
 

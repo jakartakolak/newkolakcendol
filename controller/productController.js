@@ -209,7 +209,8 @@ class Controller {
         
     }
     static reset(reset, res,state) {
-        if (Boolean(state.reset)) {
+        console.log(state.reset);
+        if (typeof state.reset == Boolean) {
             User.findOne({
                 where: {
                     username: reset.user.username
@@ -233,10 +234,10 @@ class Controller {
                     })
                 })
                 .catch(err => {
-                    res.send(err)
+                   
                 })
         } else {
-            res.status(400).json({"status":"failed","message":"count must be Boolean"})
+            res.status(400).json({"status":"failed","message":"state must be Boolean"})
         }
     }
 

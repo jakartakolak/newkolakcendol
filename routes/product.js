@@ -30,5 +30,9 @@ router.post('/reset',authenticate,function(req,res){
     let condition = req.body
     Controller.reset(req,res,condition)
 })
+router.post('/status',authenticate,function(req,res){
+    let decodedUser = req.user
+    Controller.status(req,res,decodedUser)
+})
 
 module.exports = router

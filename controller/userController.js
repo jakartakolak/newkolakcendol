@@ -1,4 +1,4 @@
-const { User } = require('../models')
+const {User}  = require('../models')
 const crypt = require('../helpers/cyrpt')
 const jwt = require('../helpers/jwt')
 
@@ -20,8 +20,6 @@ class Controller {
             }
         })
             .then(response => {
-                let username = response[0].dataValues.username
-                let email = response[0].dataValues.email
                 if (response[1]) {
                     res.status(201).json({ "Status": "Created", "Message": "New User Registered" })
                 } else {
@@ -41,15 +39,13 @@ class Controller {
 
     static userLogin(req, res) {
         let userLogin = req.body
-        const { username, password } = userLogin
         User.findOne({
             where: {
-                username: userLogin.username,
-                password:userLogin.password
+                username : userLogin.username
             }
         })
             .then(data => {
-                if (crypt.checkPassword(password, data.password)) {
+                if (crypt.checkPassword(userLogin.password, data.password)) {
                     let signUser = {
                         username: data.username,
                         email: data.email,
@@ -63,11 +59,15 @@ class Controller {
                         "status":"success",
                         "Authorization":token,
                     })
+                } else{
+                    res.status(400).json(
+                        {"status":"failed","message":"Wrong Username or Password"}
+                    )
                 }
             })
-            .catch(err => res.status(400).json(
-                {"status":"failed","message":"Wrong Username or Password"}
-            ))
+            .catch(err=>{
+               throw err
+            })
     }
 
     static help(req,res){

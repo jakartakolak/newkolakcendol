@@ -239,6 +239,29 @@ class Controller {
             res.status(400).json({"status":"failed","message":"count must be Boolean"})
         }
     }
+
+    static status(req,res,decodedUser){
+        console.log(decodedUser);
+        User.findOne({
+            where:{
+                username:decodedUser.username
+            }
+        })
+        .then(data=>{
+           
+                res.status(200).json({
+                "username": data.username,
+                "email": data.email,
+                "phonenumber": data.phonenumber,
+                "kolakCount":data.kolakCount,
+                "rujakCount":data.rujakCount,
+                "cendolCount":data.cendolCount
+            })
+        })
+        .catch(err=>{
+            res.status(401).json("error")
+        })
+    }
 }
 
 module.exports = Controller

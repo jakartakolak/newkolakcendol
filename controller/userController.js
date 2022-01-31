@@ -65,7 +65,7 @@ class Controller {
                     })
                 }
             })
-            .catch(err => res.status(401).json(
+            .catch(err => res.status(400).json(
                 {"status":"failed","message":"Wrong Username or Password"}
             ))
     }

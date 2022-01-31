@@ -1,10 +1,16 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "postgres",
-    "database": "kolak",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "username": "jfszdgwzpkigmx",
+    "password": "5be9ac381dabe4941319b761319c80a5e878c7330d53e853e5088bcb70a69455",
+    "database": "d5qnbkhb6hfi4g",
+    "host": "ec2-54-208-139-247.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+          "require": true,
+          "rejectUnauthorized": false
+      }
+    }
   },
   "test": {
     "username": "root",
@@ -14,10 +20,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "qplmtrmqzipztn",
-    "password": "154a39f6e7e8fa0767cfbbf366b2ce0193e2991942f120880eb11fc4b7e35e54",
-    "database": "d7gc4k6ro7tq8v",
-    "host": "ec2-34-230-133-163.compute-1.amazonaws.com",
+    "username": "jfszdgwzpkigmx",
+    "password": "5be9ac381dabe4941319b761319c80a5e878c7330d53e853e5088bcb70a69455",
+    "database": "d5qnbkhb6hfi4g",
+    "host": "ec2-54-208-139-247.compute-1.amazonaws.com",
     "dialect": "postgres",
     "dialectOptions": {
       "ssl": {

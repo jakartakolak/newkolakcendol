@@ -209,7 +209,6 @@ class Controller {
         
     }
     static reset(reset, res,state) {
-        console.log(state.reset);
         if (typeof state.reset == Boolean) {
             User.findOne({
                 where: {

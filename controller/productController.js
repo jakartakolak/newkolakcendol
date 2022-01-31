@@ -259,7 +259,7 @@ class Controller {
             })
         })
         .catch(err=>{
-            res.status(401).json("error")
+            res.status(401).json({"status":"failed","message":"please login/sign-up"})
         })
     }
 }

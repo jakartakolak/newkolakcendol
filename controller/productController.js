@@ -209,7 +209,7 @@ class Controller {
         
     }
     static reset(reset, res,state) {
-        if (typeof state.reset == Boolean) {
+        if (Boolean(state)) {
             User.findOne({
                 where: {
                     username: reset.user.username

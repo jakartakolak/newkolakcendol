@@ -19,6 +19,7 @@
   "homepage": "https://github.com/khaledyurino/kolakcendolrujak#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "bearer": "0.0.20",
     "connect-timeout": "^1.9.0",
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",

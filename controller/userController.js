@@ -1,17 +1,21 @@
 const {User}  = require('../models')
 const crypt = require('../helpers/cyrpt')
 const jwt = require('../helpers/jwt')
+const Sequelize = require('sequelize');
 
 class Controller {
 
     static userRegister(req, res) {
         let newUser = req.body
         User.findOrCreate({
-            where: {
-                username: newUser.username,
-                email: newUser.email,
-            },
+            where: Sequelize.or(
+                { username: newUser.username },
+                { email: newUser.email }
+              )
+              ,
             defaults: {
+                username: newUser.username.toLowerCase(),
+                email: newUser.email.toLowerCase(),
                 password: newUser.password,
                 phonenumber: newUser.phonenumber,
                 kolakCount : 0,
@@ -23,25 +27,25 @@ class Controller {
                 if (response[1]) {
                     res.status(201).json({ "Status": "Created", "Message": "New User Registered" })
                 } else {
-                    res.status(400).json({"Status":"Failed","message":"Username or Email has been taken"})
+                    throw {status: "Failed", message: 'Username or Email has been taken'}
+                    // res.status(400).json({"Status":"Failed","message":"Username or Email has been taken"})
                 }
             })
             .then((user, created) => {
                 res.json(created);
             })
+
             .catch(err => {
-                console.log(err);
+                res.status(400).json(err);
 
-            })
-
-
+        })
     }
 
     static userLogin(req, res) {
         let userLogin = req.body
         User.findOne({
             where: {
-                username : userLogin.username
+                username : userLogin.username.toLowerCase()
             }
         })
             .then(data => {

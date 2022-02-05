@@ -241,7 +241,6 @@ class Controller {
     }
 
     static status(req,res,decodedUser){
-        console.log(decodedUser);
         User.findOne({
             where:{
                 username:decodedUser.username

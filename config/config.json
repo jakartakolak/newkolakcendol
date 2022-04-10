@@ -1,10 +1,16 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "postgres",
-    "database": "kolak",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "username": "crvixjfloochmd",
+    "password": "81a108c438654f2f0f7513af0dbf11079f5edadc81ffa9f625fc77b0f6956ee9",
+    "database": "dbltabjtap7mln",
+    "host": "ec2-3-230-122-20.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+          "require": true,
+          "rejectUnauthorized": false
+      }
+    }
     
   },
   "test": {

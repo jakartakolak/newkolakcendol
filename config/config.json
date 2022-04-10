@@ -11,7 +11,6 @@
           "rejectUnauthorized": false
       }
     }
-    
   },
   "test": {
     "username": "root",
@@ -21,10 +20,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "scyjvdbegyusun",
-    "password": "8b62c368c458c9fde42acd503ebd303bcdf1d970fd026f764acc49cc1100fb6d",
-    "database": "d86sum4ofne98v",
-    "host": "ec2-54-160-35-196.compute-1.amazonaws.com",
+    "username": "crvixjfloochmd",
+    "password": "81a108c438654f2f0f7513af0dbf11079f5edadc81ffa9f625fc77b0f6956ee9",
+    "database": "dbltabjtap7mln",
+    "host": "ec2-3-230-122-20.compute-1.amazonaws.com",
     "dialect": "postgres",
     "dialectOptions": {
       "ssl": {

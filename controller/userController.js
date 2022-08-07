@@ -49,6 +49,7 @@ class Controller {
             }
         })
             .then(data => {
+                console.log(data);
                 if (crypt.checkPassword(userLogin.password, data.password)) {
                     let signUser = {
                         username: data.username,

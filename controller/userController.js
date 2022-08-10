@@ -10,7 +10,7 @@ class Controller {
         User.findOrCreate({
             where: Sequelize.or(
                 { username: newUser.username.toLowerCase() },
-                { email: newUser.email }
+                { email: newUser.email.toLowerCase() }
               )
               ,
             defaults: {

@@ -9,7 +9,7 @@ class Controller {
         let newUser = req.body
         User.findOrCreate({
             where: Sequelize.or(
-                { username: newUser.username },
+                { username: newUser.username.toLowerCase() },
                 { email: newUser.email }
               )
               ,
@@ -45,7 +45,7 @@ class Controller {
         let userLogin = req.body
         User.findOne({
             where: {
-                username : userLogin.username.toLowerCase()
+                username : userLogin.username
             }
         })
             .then(data => {

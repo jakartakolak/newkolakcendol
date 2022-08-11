@@ -50,28 +50,34 @@ class Controller {
         })
             .then(data => {
                 console.log(data);
-                if (crypt.checkPassword(userLogin.password, data.password)) {
-                    let signUser = {
-                        username: data.username,
-                        email: data.email,
-                        phonenumber: data.phonenumber,
-                        kolakCount:data.kolakCount,
-                        rujakCount:data.rujakCount,
-                        cendolCount:data.cendolCount
-                    };
-                    let token = jwt.sign(signUser);
-                    res.status(200).json({
-                        "status":"success",
-                        "Authorization":token,
-                    })
-                } else{
+                const passwordCheck = data?.password
+                if(!passwordCheck){
                     res.status(400).json(
                         {"status":"failed","message":"Wrong Username or Password"}
                     )
                 }
-            })
-            .catch(err=>{
-               throw err
+                else{
+                    if (crypt.checkPassword(userLogin.password, data.password)) {
+                        let signUser = {
+                            username: data.username,
+                            email: data.email,
+                            phonenumber: data.phonenumber,
+                            kolakCount:data.kolakCount,
+                            rujakCount:data.rujakCount,
+                            cendolCount:data.cendolCount
+                        };
+                        let token = jwt.sign(signUser);
+                        res.status(200).json({
+                            "status":"success",
+                            "Authorization":token,
+                        })
+                    } else{
+                        res.status(400).json(
+                            {"status":"failed","message":"Wrong Username or Password"}
+                        )
+                    }
+                }
+                    
             })
     }
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "pm2-runtime start ecosystem.config.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.19",
     "pg": "^8.7.1",
+    "pm2": "^5.2.0",
     "postgres": "^1.0.2",
     "sequelize": "^6.12.5"
   },

@@ -1,34 +1,40 @@
 {
   "development": {
-    "username": "nztzeilyxyqrcm",
-    "password": "5503fc23d59865eecfecc4ed56706f4a098ebaca7f3f04b99eb5fa21dfcfddde",
-    "database": "d68grs6kolnhhg",
-    "host": "ec2-34-207-12-160.compute-1.amazonaws.com",
-    "dialect": "postgres",
+    "username": "dgwu4m6fffe4fdifuuk0",
+    "password": "pscale_pw_rBOutYoQ4qJWS5XjISMPBUcgMG3OQiMpeh5lybYCwqu",
+    "database": "kolakcendolrujak",
+    "host": "ap-southeast.connect.psdb.cloud",
+    "dialect": "mysql",
     "dialectOptions": {
       "ssl": {
           "require": true,
-          "rejectUnauthorized": false
+          "rejectUnauthorized": true
       }
     }
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "nztzeilyxyqrcm",
-    "password": "5503fc23d59865eecfecc4ed56706f4a098ebaca7f3f04b99eb5fa21dfcfddde",
-    "database": "d68grs6kolnhhg",
-    "host": "ec2-34-207-12-160.compute-1.amazonaws.com",
-    "dialect": "postgres",
+    "username": "dgwu4m6fffe4fdifuuk0",
+    "password": "pscale_pw_rBOutYoQ4qJWS5XjISMPBUcgMG3OQiMpeh5lybYCwqu",
+    "database": "kolakcendolrujak",
+    "host": "ap-southeast.connect.psdb.cloud",
+    "dialect": "mysql",
     "dialectOptions": {
       "ssl": {
           "require": true,
-          "rejectUnauthorized": false
+          "rejectUnauthorized": true
+      }
+    }
+  },
+  "production": {
+    "username": "dgwu4m6fffe4fdifuuk0",
+    "password": "pscale_pw_rBOutYoQ4qJWS5XjISMPBUcgMG3OQiMpeh5lybYCwqu",
+    "database": "kolakcendolrujak",
+    "host": "ap-southeast.connect.psdb.cloud",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+          "require": true,
+          "rejectUnauthorized": true
       }
     }
   }
